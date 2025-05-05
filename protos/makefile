@@ -1,4 +1,5 @@
 generate :
+	mkdir -p gen/go
 	protoc -I proto proto/sso/sso.proto \
 	--plugin=protoc-gen-go=(go env GOPATH)/bin/protoc-gen-go \
 	--go_out=./gen/go/ --go_opt=paths=source_relative \
